@@ -1,6 +1,6 @@
 ---
 layout: post
-category: android-tool
+category: android
 title: 从EclipseADT迁移到AndroidStudio
 description: ""
 modified: 2014-02-24

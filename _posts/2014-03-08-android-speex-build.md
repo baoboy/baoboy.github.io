@@ -1,6 +1,6 @@
 ---
 layout: post
-category: android-development
+category: android
 title: Android中Speex音频编解码库的编译
 description: ""
 modified: 2014-02-24

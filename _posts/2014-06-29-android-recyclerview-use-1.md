@@ -1,3 +1,15 @@
+---
+layout: post
+category: android
+title: android-RecyclerView 的使用（一）
+description: ""
+modified: 2014-06-29
+tags: [android]
+comments: true
+share: true
+comments: true
+---
+
 android-RecyclerView 的使用（一）
 -
 `RecyclerView` 是 android-support-v7-21 版本中新增的一个 Widgets, 还有一个 `CardView` 会在下次介绍使用。  
