@@ -21,7 +21,7 @@ android-RecyclerView 的使用（一）
 
 build.gradle 配置
 
-```groovy
+{% highlight groovy %}
 android {
     compileSdkVersion 'android-L'
     buildToolsVersion "20.0.0"
@@ -38,13 +38,13 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:+'
 	...
 }
+{% endhighlight %}
 
-```
 ## 开始
 
 首先是布局文件中使用 `RecyclerView` 
 
-```xml
+{% highlight xml %}
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -58,12 +58,12 @@ dependencies {
         android:scrollbars="vertical" />
 
 </RelativeLayout>
-```
+{% endhighlight %}
 
 Activity 中
 
-```java
-	@Override
+{% highlight java %}
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
@@ -86,13 +86,13 @@ Activity 中
         recyclerView.setAdapter(adapter);
 
     }
-```
+{% endhighlight %}
 
 `RecyclerView` 首先的一个特点就是，将 layout 抽象成了一个 `LayoutManager`，`RecylerView` 不负责子 View 的布局， 我们可以自定义 `LayoutManager` 来实现不同的布局效果， 目前只提供了 `LinearLayoutManager`。 `LinearLayoutManager` 可以指定方向，默认是垂直， 可以指定水平， 这样就轻松实现了水平的 ListView。  
 
 接下来看 `Adapter` 是怎么实现的
 
-```java
+{% highlight java %}
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
     // 数据集
@@ -134,7 +134,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     }
 }
 
-```
+{% endhighlight %}
 
 `RecyclerView` 的另一个特点是标准化了 `ViewHolder`， 编写 `Adapter` 面向的是 `ViewHoder` 而不在是 `View` 了， 复用的逻辑被封装了， 写起来更加简单。  
 
