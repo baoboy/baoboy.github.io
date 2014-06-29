@@ -1,18 +1,40 @@
-#Thinny - The Infinite's Nymphet
+# Architect theme
 
-##About
-Thinny is a beautiful theme for [Jekyll](http://jekyllrb.com/).
+This is a [Jekyll][1] theme that is an adaptation of [@jasonlong][2]'s [Architect theme][4] on [GitHub Pages][3].
 
-(if you're looking for the [Ghost](http://ghost.org) release of the theme, check [this page](https://github.com/camporez/Thinny/releases/tag/v0.3-alexandra))
+This is the raw HTML and styles that are used for the *Architect* theme on [GitHub Pages](http://pages.github.com/).
 
-##Demo
-[![Preview image](https://f.cloud.github.com/assets/5755892/2002329/bdb5a052-85ed-11e3-8e00-a892910b6917.png)](http://camporez.com/)
-The above image is a preview of how the post header looks on Thinny.
+![](http://cl.ly/image/1x0Q3213330G/content)
 
-A live demo is available [on my personal blog](http://camporez.com/).
+# How to use it?
 
-##More information
-Read the blog post [here](http://camporez.com/blog/thinny-2/).
+Install Jekyll in your system
 
-##Reporting issues
-You can report an issue or request a feature [here](http://github.com/camporez/camporez.github.io/issues) or on [twitter](http://twitter.com/iancamporez).
+```
+$ gem install jekyll # use sudo if your system requires it
+```
+
+Download the theme @ http://github.com/pietromenna/jekyll-architect-theme/archive/master.zip
+
+Unzip it and use it as a regular jekyll folder.
+
+```
+$ unzip master.zip
+```
+
+Use it!
+
+```
+$ jekyll serve
+```
+
+For more details read about [Jekyll][1] on its web page.
+
+# License
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
+
+[1]: http://jekyllrb.com
+[2]: https://github.com/jasonlong
+[3]: http://pages.github.com/
+[4]: http://github.com/jasonlong/architect-theme
