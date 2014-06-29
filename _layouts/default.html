@@ -1,8 +1,8 @@
 ---
-title: Herring Cove
+theme :
+  name : Snail
+Snail :
+  about_path : /about.html
 ---
-{% include header.html %}
-{% include showcase.html %}
-{% include greeting.html %}
-{{ content }}
-{% include footer.html %}
+{% include JB/setup %}
+{% include themes/Snail/default.html %}
