@@ -136,18 +136,14 @@ intent.putExtra("classroom", PG.convertParcelable(room));
 ### 导入jar包
 
 将jar包导入到项目中，jar包只有10Kb大小，相当轻巧。
-<p>
-<a href="https://github.com/baoyongzhang/ParcelableGenerator/raw/master/pg1.1.jar" alt="download jar">
-<font size="16px">Download jar</font>
-<a>
-</p>
 
+* [Download jar](https://github.com/baoyongzhang/ParcelableGenerator/raw/master/pg1.1.jar)
 
-###环境配置
+### 环境配置
 
 不知道各位是否用过butterknife，本项目的原理与butterknife类似，使用的APT，需要配置AnnotationProcessing
 
-####Eclipse配置方法
+#### Eclipse配置方法
 
 * 项目右键->Properties->Java Compiler->Annotation Processing	开启 Enable project specific settings
 
