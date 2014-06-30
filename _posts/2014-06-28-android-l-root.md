@@ -28,12 +28,15 @@ Android L 提供下载当天就将 Nexus 5 刷入了 Android L，界面效果还
 
 ## 美图欣赏
 
+<p>
 <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/28-01.png" width="240"/>
 <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/28-02.png" width="240"/>
 <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/28-03.png" width="240"/>
-<br/>
+</p>
+<p>
 <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/28-04.png" width="240"/>
 <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/28-05.png" width="240"/>
+</p>
 
 ## ROOT
 
