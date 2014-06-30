@@ -1,7 +1,7 @@
 ---
 layout: post
 category: android
-title: android-RecyclerView 的使用（一）
+title: adb 无线调试，妈妈再也不用担心我的手机电池了
 description: ""
 modified: 2014-06-29
 tags: [adb, debug]
@@ -18,7 +18,7 @@ adb 无线调试，妈妈再也不用担心我的手机电池了
 
 附上下载地址先
 
-* [请不要怜悯你的鼠标猛戳此处下载apk](/files/adbWireless.apk)
+* [请不要怜悯你的鼠标猛戳此处下载apk](https://raw.githubusercontent.com/baoboy/file.baoboy.github.io/master/2014-06/adbWireless.apk)
 
 如果你的鼠标没被猛戳坏的话，那就进入使用教程咯~  
   
@@ -26,10 +26,12 @@ adb 无线调试，妈妈再也不用担心我的手机电池了
 * 进入首页，看到中间有个圆按钮就猛戳上去
 * 按钮变成绿色， 下面显示着手机的 ip地址
 * 
-* <img src="images/2014-06-24-02.png" width="240"/>
+* <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/24-01.png" width="240"/>
 * 
 * 在电脑 Command 中敲：adb connect ip
 * 
-* <img src="images/2014-06-24-01.png" width="240"/>
+* <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/24-02.png" width="240"/>
 
 大功告成！ adb devices 一下看看有木有吧， 或者直接去 IDE 中查看， 然后就可以愉快的玩耍了，应用部署、log等统统无线搞定。
+
+adb 无线调试！妈妈再也不用担心我的手机电池了！

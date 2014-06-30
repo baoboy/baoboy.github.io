@@ -1,5 +1,9 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
+
+imageurl: https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/
+fileurl: https://raw.githubusercontent.com/baoboy/file.baoboy.github.io/master/
+
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
@@ -28,8 +32,6 @@ contact :
 #
 links :
   Baoyz's Blog : http://www.baoyz.com/
-  Baoyz's Github : https://github.com/baoyongzhang
-  Baoyz's Weibo : http://www.weibo.com/u/3224930551
 
 # The search engine. Only support google custom search engine.
 #
@@ -106,11 +108,11 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : duoshuo
     duoshuo :
-      short_name : baoyz
+      short_name : Baoyz's Blog
     disqus :
-      short_name : baoyz
+      short_name : Baoyz's Blog
     livefyre :
       site_id : 123
     intensedebate :
