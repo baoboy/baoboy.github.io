@@ -30,7 +30,7 @@ adb 无线调试，妈妈再也不用担心我的手机电池了
 * 
 * 在电脑 Command 中敲：adb connect ip
 * 
-* <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/24-02.png" width="240"/>
+* <img src="https://raw.githubusercontent.com/baoboy/image.baoboy.github.io/master/2014-06/24-02.png"/>
 
 大功告成！ adb devices 一下看看有木有吧， 或者直接去 IDE 中查看， 然后就可以愉快的玩耍了，应用部署、log等统统无线搞定。
 
