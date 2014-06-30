@@ -108,9 +108,9 @@ JB :
   comments :
     provider : disqus
     duoshuo :
-      short_name : Baoyz's Blog
+      short_name : baoyz
     disqus :
-      short_name : Baoyz's Blog
+      short_name : baoyz
     livefyre :
       site_id : 123
     intensedebate :
