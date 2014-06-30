@@ -3,7 +3,7 @@ layout: post
 category: android
 title: adb 无线调试，妈妈再也不用担心我的手机电池了
 description: ""
-modified: 2014-06-29
+modified: 2014-06-24
 tags: [adb, debug]
 comments: true
 share: true
