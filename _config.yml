@@ -32,6 +32,8 @@ contact :
 #
 links :
   Baoyz's Blog : http://www.baoyz.com/
+  Baoyz's Github : https://github.com/baoyongzhang
+  Baoyz's Weibo : http://www.weibo.com/u/3224930551
 
 # The search engine. Only support google custom search engine.
 #
@@ -108,11 +110,11 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : duoshuo
+    provider : disqus
     duoshuo :
-      short_name : Baoyz's Blog
+      short_name : baoyz
     disqus :
-      short_name : Baoyz's Blog
+      short_name : baoyz
     livefyre :
       site_id : 123
     intensedebate :
