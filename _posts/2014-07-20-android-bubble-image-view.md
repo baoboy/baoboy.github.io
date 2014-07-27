@@ -27,17 +27,6 @@ BubbleImageView
 
 ## 使用方法
 
-<com.baoyz.widget.BubbleImageView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:padding="10dp"
-      android:src="@drawable/pic"
-      app:bubble_angle="20dp"
-      app:bubble_arrowHeight="50dp"
-      app:bubble_arrowLocation="right"
-      app:bubble_arrowOffset="10dp"
-      app:bubble_arrowTop="50dp"
-      app:bubble_arrowWidth="30dp" />
 
 ## 属性介绍
 
