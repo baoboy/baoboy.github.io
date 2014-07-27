@@ -39,6 +39,7 @@ BubbleImageView
       app:bubble_arrowOffset="10dp"
       app:bubble_arrowTop="50dp"
       app:bubble_arrowWidth="30dp" />
+      
 {% endhighlight %}
 
 ## 属性介绍
