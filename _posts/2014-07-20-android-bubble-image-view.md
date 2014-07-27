@@ -27,7 +27,6 @@ BubbleImageView
 
 ## 使用方法
 
-{% highlight xml %}
 <com.baoyz.widget.BubbleImageView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -39,8 +38,6 @@ BubbleImageView
       app:bubble_arrowOffset="10dp"
       app:bubble_arrowTop="50dp"
       app:bubble_arrowWidth="30dp" />
-      
-{% endhighlight %}
 
 ## 属性介绍
 
