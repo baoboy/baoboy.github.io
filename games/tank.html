@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>TankWar</title>
+		<meta charset="utf-8"></meta>
+		<style type="text/css">
+		<!--
+			#tankMap{
+				border:1px solid #F00;
+				background-color:#000;
+			}
+		-->
+		</style>
+	</head>
+	<body onkeydown="getCommand()">
+		<!--画布：游戏界面-->
+		<canvas id="tankMap" width="500px" height="400px"></canvas>
+		<span id="index"><span>
+		<script language="javascript" src="tankWar6.js"></script>
+		<script language="javascript">
+			//得到画笔
+			var cxt=document.getElementById("tankMap").getContext("2d");
+			
+			//创建英雄
+			var hero=null;
+			createHero();
+			
+			//爆炸数组
+			var bombs=new Array();
+			
+			//创建敌人坦克
+			var enemyTanks=new Array();
+			for(var i=0;i<maxEnemyTank;i++){
+				createEnemyTank();
+			}
+			
+			//英雄子弹数组
+			var heroBullets=new Array();
+			
+			//敌人子弹数组
+			var enemyBullets=new Array();
+			
+			//墙数组
+			var walls=new Array();
+			//创建墙
+			for(var i=1;i<=10;i++){
+				walls.push(new Wall((i+2)*20+i, 50, "#804000", 2, 1));
+				walls.push(new Wall((i+2)*20+i, 71, "#804000", 2, 1));
+			}
+			for(var i=1;i<=10;i++){
+				walls.push(new Wall((i+2)*20+i, 250, "#FFFFFF", 2, 2));
+			}
+			
+			//更新画布，初始化界面
+			flushTankMap();
+			
+			//键盘事件
+			function getCommand(){
+				switch(event.keyCode){
+					case 87:
+						hero.moveUp();
+						break;
+					case 68:
+						hero.moveRight();
+						break;
+					case 83:
+						hero.moveDown();
+						break;
+					case 65:
+						hero.moveLeft();
+						break;
+					case 74:
+						hero.shot();
+					default:
+						return;
+				}
+				flushTankMap();
+			}
+			
+			//更新画布
+			function flushTankMap(){
+				//清屏
+				cxt.clearRect(0,0,500,400);
+				//绘制英雄坦克
+				hero.draw();
+				//绘制敌人坦克
+				for(var i=0;i<enemyTanks.length;i++){
+					enemyTanks[i].draw();
+				}
+				//绘制英雄坦克子弹
+				for(var i=0;i<heroBullets.length;i++){
+					heroBullets[i].draw();
+				}
+				//绘制敌人坦克子弹
+				for(var i=0;i<enemyBullets.length;i++){
+					enemyBullets[i].draw();
+				}
+				//绘制爆炸
+				for(var i=0;i<bombs.length;i++){
+					bombs[i].draw();
+				}
+				//绘制墙
+				for(var i=0;i<walls.length;i++){
+					walls[i].draw();
+				}
+			}
+			
+			//定时更新画布
+			window.setInterval("flushTankMap()", 100);
+		</script>
+	</body>
+</html>
