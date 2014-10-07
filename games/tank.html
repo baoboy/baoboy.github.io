@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+ï»¿<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>TankWar</title>
@@ -13,36 +13,36 @@
 		</style>
 	</head>
 	<body onkeydown="getCommand()">
-		<!--»­²¼£ºÓÎÏ·½çÃæ-->
+		<!--ç”»å¸ƒï¼šæ¸¸æˆç•Œé¢-->
 		<canvas id="tankMap" width="500px" height="400px"></canvas>
 		<span id="index"><span>
 		<script language="javascript" src="tankWar6.js"></script>
 		<script language="javascript">
-			//µÃµ½»­±Ê
+			//å¾—åˆ°ç”»ç¬”
 			var cxt=document.getElementById("tankMap").getContext("2d");
 			
-			//´´½¨Ó¢ĞÛ
+			//åˆ›å»ºè‹±é›„
 			var hero=null;
 			createHero();
 			
-			//±¬Õ¨Êı×é
+			//çˆ†ç‚¸æ•°ç»„
 			var bombs=new Array();
 			
-			//´´½¨µĞÈËÌ¹¿Ë
+			//åˆ›å»ºæ•Œäººå¦å…‹
 			var enemyTanks=new Array();
 			for(var i=0;i<maxEnemyTank;i++){
 				createEnemyTank();
 			}
 			
-			//Ó¢ĞÛ×Óµ¯Êı×é
+			//è‹±é›„å­å¼¹æ•°ç»„
 			var heroBullets=new Array();
 			
-			//µĞÈË×Óµ¯Êı×é
+			//æ•Œäººå­å¼¹æ•°ç»„
 			var enemyBullets=new Array();
 			
-			//Ç½Êı×é
+			//å¢™æ•°ç»„
 			var walls=new Array();
-			//´´½¨Ç½
+			//åˆ›å»ºå¢™
 			for(var i=1;i<=10;i++){
 				walls.push(new Wall((i+2)*20+i, 50, "#804000", 2, 1));
 				walls.push(new Wall((i+2)*20+i, 71, "#804000", 2, 1));
@@ -51,10 +51,10 @@
 				walls.push(new Wall((i+2)*20+i, 250, "#FFFFFF", 2, 2));
 			}
 			
-			//¸üĞÂ»­²¼£¬³õÊ¼»¯½çÃæ
+			//æ›´æ–°ç”»å¸ƒï¼Œåˆå§‹åŒ–ç•Œé¢
 			flushTankMap();
 			
-			//¼üÅÌÊÂ¼ş
+			//é”®ç›˜äº‹ä»¶
 			function getCommand(){
 				switch(event.keyCode){
 					case 87:
@@ -77,35 +77,35 @@
 				flushTankMap();
 			}
 			
-			//¸üĞÂ»­²¼
+			//æ›´æ–°ç”»å¸ƒ
 			function flushTankMap(){
-				//ÇåÆÁ
+				//æ¸…å±
 				cxt.clearRect(0,0,500,400);
-				//»æÖÆÓ¢ĞÛÌ¹¿Ë
+				//ç»˜åˆ¶è‹±é›„å¦å…‹
 				hero.draw();
-				//»æÖÆµĞÈËÌ¹¿Ë
+				//ç»˜åˆ¶æ•Œäººå¦å…‹
 				for(var i=0;i<enemyTanks.length;i++){
 					enemyTanks[i].draw();
 				}
-				//»æÖÆÓ¢ĞÛÌ¹¿Ë×Óµ¯
+				//ç»˜åˆ¶è‹±é›„å¦å…‹å­å¼¹
 				for(var i=0;i<heroBullets.length;i++){
 					heroBullets[i].draw();
 				}
-				//»æÖÆµĞÈËÌ¹¿Ë×Óµ¯
+				//ç»˜åˆ¶æ•Œäººå¦å…‹å­å¼¹
 				for(var i=0;i<enemyBullets.length;i++){
 					enemyBullets[i].draw();
 				}
-				//»æÖÆ±¬Õ¨
+				//ç»˜åˆ¶çˆ†ç‚¸
 				for(var i=0;i<bombs.length;i++){
 					bombs[i].draw();
 				}
-				//»æÖÆÇ½
+				//ç»˜åˆ¶å¢™
 				for(var i=0;i<walls.length;i++){
 					walls[i].draw();
 				}
 			}
 			
-			//¶¨Ê±¸üĞÂ»­²¼
+			//å®šæ—¶æ›´æ–°ç”»å¸ƒ
 			window.setInterval("flushTankMap()", 100);
 		</script>
 	</body>

@@ -1,44 +1,58 @@
-<html>
+ï»¿<html>
 	<head>
-		<title>Ì°³ÔÉß</title>
+		<title>è´ªåƒè›‡</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"  />
 		<style type="text/css">
 			.btn{
 				width:50px;
 				height:50px;
 			}
+			.full-screen {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			#map {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				display: block;
+			}
 		</style>
 	</head>
-	<body onkeydown="getCommand()">
-		<canvas id="map" width="500" height="400" style="border:1px solid #000">ÄúµÄä¯ÀÀÆ÷²»Ö§³ÖHTML5</canvas><span id="s1"></span>
+	<body onkeydown="getCommand()" class="full-screen">
+		<canvas id="map" style="border:1px solid #000">æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒHTML5</canvas><span id="s1"></span>
 		<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input class="btn" type="button" value=" ¡ü " onclick="snake.turn(0);"/><br>
-		<input class="btn" type="button" value=" ¡û " onclick="snake.turn(3);"/>&nbsp;&nbsp;&nbsp;
-		<input class="btn" type="button" value=" ¡ú " onclick="snake.turn(1);"/><br>&nbsp;&nbsp;&nbsp;&nbsp;
-		<input class="btn" type="button" value=" ¡ı " onclick="snake.turn(2);"/>
+		<input class="btn" type="button" value=" â†‘ " onclick="snake.turn(0);"/><br>
+		<input class="btn" type="button" value=" â† " onclick="snake.turn(3);"/>&nbsp;&nbsp;&nbsp;
+		<input class="btn" type="button" value=" â†’ " onclick="snake.turn(1);"/><br>&nbsp;&nbsp;&nbsp;&nbsp;
+		<input class="btn" type="button" value=" â†“ " onclick="snake.turn(2);"/>
 		
-		<input type="button" value="ÔİÍ£" onclick="suspend()" />
-		<input type="button" value="¿ªÊ¼" onclick="start()" />
+		<input type="button" value="æš‚åœ" onclick="suspend()" />
+		<input type="button" value="å¼€å§‹" onclick="start()" />
 		
 		<script language="javascript">
-			//ÓÎÏ·½çÃæ´óĞ¡
+			//æ¸¸æˆç•Œé¢å¤§å°
 			var width=400;
 			var height=400;
 			
-			//Ì°³ÔÉß½ÚµãµÄ´óĞ¡(Õı·½ĞÎ)
+			//è´ªåƒè›‡èŠ‚ç‚¹çš„å¤§å°(æ­£æ–¹å½¢)
 			var nodeWidth=10;
 			
-			//Ì°³ÔÉß½ÚµãÑÕÉ«
+			//è´ªåƒè›‡èŠ‚ç‚¹é¢œè‰²
 			var headNodeColor="#FF8000";
 			var bodyNodeColor="#000000";
 			
-			//Ê³ÎïÑÕÉ«
+			//é£Ÿç‰©é¢œè‰²
 			var foodColor="#00FF00";
 			
 			var map=document.getElementById("map");
-			map.width=width;
-			map.height=height;
+			//map.width=width;
+			//map.height=height;
 			
 			var cxt=map.getContext("2d");
 			
@@ -49,7 +63,7 @@
 				snake.add2Head();
 			}
 			
-			//Ì°³ÔÉß
+			//è´ªåƒè›‡
 			function Snake(direct, x, y){
 				this.direct=direct;
 				this.x=x;
@@ -57,7 +71,7 @@
 				this.head=new Node(this.x, this.y);
 				this.tail=this.head;
 				
-				//»æÖÆÌ°³ÔÉß
+				//ç»˜åˆ¶è´ªåƒè›‡
 				this.draw=function(){
 					this.head.draw(headNodeColor);
 					var node=this.head.next;
@@ -67,7 +81,7 @@
 					}
 				}
 				
-				//Í·²¿Ìí¼ÓÒ»¸ö½Úµã
+				//å¤´éƒ¨æ·»åŠ ä¸€ä¸ªèŠ‚ç‚¹
 				this.add2Head=function(){
 					var node=null;
 					switch(this.direct){
@@ -90,7 +104,7 @@
 					this.head=node;
 				}
 				
-				//Î²²¿Ìí¼ÓÒ»¸ö½Úµã
+				//å°¾éƒ¨æ·»åŠ ä¸€ä¸ªèŠ‚ç‚¹
 				this.add2Tail=function(){
 					var node=new Node(this.tail.x, this.tail.y);
 					this.tail.next=node;
@@ -98,7 +112,7 @@
 					this.tail=node;
 				}
 				
-				//×ªÏò
+				//è½¬å‘
 				this.turn=function(direct){
 					if(direct==this.direct || (direct+2)==this.direct || (direct-2)==this.direct)
 						return;
@@ -106,7 +120,7 @@
 					//this.move();
 				}
 				
-				//ÒÆ¶¯£¬Ô­Àí£º½«tailÒÆµ½headÇ°Ãæ£¬±ä³Éhead£¬tailµÄÇ°Ò»¸ö±ä³Étail£¬ÒÀ´ÎÀàÍÆ 
+				//ç§»åŠ¨ï¼ŒåŸç†ï¼šå°†tailç§»åˆ°headå‰é¢ï¼Œå˜æˆheadï¼Œtailçš„å‰ä¸€ä¸ªå˜æˆtailï¼Œä¾æ¬¡ç±»æ¨ 
 				this.move=function(){
 					var node=this.tail;
 					switch(this.direct){
@@ -145,7 +159,7 @@
 					
 				}
 				
-				//¼ì²âÌ°³ÔÉßÅö×²
+				//æ£€æµ‹è´ªåƒè›‡ç¢°æ’
 				this.check=function(){
 					var node=this.head;
 					if(node.x<0 || node.x>(width-nodeWidth) || node.y<0 || node.y>(height-nodeWidth)){
@@ -163,7 +177,7 @@
 				
 			}
 			
-			//Ì°³ÔÉßµÄ½Úµã
+			//è´ªåƒè›‡çš„èŠ‚ç‚¹
 			function Node(x, y){
 				this.x=x;
 				this.y=y;
@@ -176,7 +190,7 @@
 				}
 			}
 			
-			//Ê³Îï
+			//é£Ÿç‰©
 			function Food(x, y){
 				this.x=x;
 				this.y=y;
@@ -190,7 +204,7 @@
 					}
 				}
 				
-				//¼ì²éÌ°³ÔÉßÊÇ·ñÅöµ½ÁËÊ³Îï
+				//æ£€æŸ¥è´ªåƒè›‡æ˜¯å¦ç¢°åˆ°äº†é£Ÿç‰©
 				this.check=function(){
 					var node=snake.head;
 					if(node.x>=this.x && node.x<=this.x+(nodeWidth-1) && node.y>=this.y && node.y<=this.y+(nodeWidth-1)){
@@ -204,18 +218,18 @@
 			
 			createFood();
 			
-			//Éú³ÉÊ³Îï
+			//ç”Ÿæˆé£Ÿç‰©
 			function createFood(){
 				var x=Math.round(Math.random()*((width-nodeWidth)/nodeWidth))*nodeWidth;
 				var y=Math.round(Math.random()*((height-nodeWidth)/nodeWidth))*nodeWidth;
 				//alert(x+"---"+y);
-				document.getElementById("s1").innerHTML="Ê³Îï×ø±ê-x:"+x+"£¬y:"+y;
+				document.getElementById("s1").innerHTML="é£Ÿç‰©åæ ‡-x:"+x+"ï¼Œy:"+y;
 				food=new Food(x, y);
 			}
 			
 			var timer=null;
 			
-			//ÔİÍ£
+			//æš‚åœ
 			function suspend(){
 				if(timer!=null){
 					window.clearInterval(timer);
@@ -223,20 +237,20 @@
 				}
 			}
 			
-			//¿ªÊ¼
+			//å¼€å§‹
 			function start(){
 				if(timer==null){
 					timer=window.setInterval("snake.move()", 200);
 				}
 			}
 			
-			//ÓÎÏ·½áÊø
+			//æ¸¸æˆç»“æŸ
 			function gameOver(){
 				suspend();
 				alert("GAME OVER!");
 			}
 			
-			//Ë¢ĞÂ»­²¼
+			//åˆ·æ–°ç”»å¸ƒ
 			function flushMap(){
 				cxt.clearRect(0, 0, width, height);
 				//drawMap();
@@ -245,7 +259,7 @@
 					food.draw(foodColor);
 			}
 			
-			//¼üÅÌÊÂ¼ş
+			//é”®ç›˜äº‹ä»¶
 			function getCommand(){
 				switch(event.keyCode){
 					case 87:
