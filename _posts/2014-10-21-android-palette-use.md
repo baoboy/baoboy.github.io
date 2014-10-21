@@ -1,5 +1,16 @@
+---
+layout: post
+category: android
+title: Android Lollipop 新特性 - Palette
+description: ""
+modified: 2014-10-21
+tags: [android, palette]
+comments: true
+share: true
+comments: true
+---
 Android Lollipop 新特性 - Palette
---
+===============
 
 > Palette 可以从一张图片中提取颜色，我们可以把提取的颜色融入到App UI中，可以使UI风格更加美观融洽。比如，我们可以从图片中提取颜色设置给ActionBar做背景颜色，这样ActionBar的颜色就会随着显示图片的变化而变化。  
 
