@@ -34,6 +34,7 @@ Palette可以提取的颜色如下
 第一步，我们需要通过一个Bitmap对象来生成一个对应的Palette对象。  
 
 Palette 提供了四个静态方法用来生成对象。
+
 * `Palette generate(Bitmap bitmap)`
 * `Palette generate(Bitmap bitmap, int numColors)`
 * `generateAsync(Bitmap bitmap, PaletteAsyncListener listener)`
