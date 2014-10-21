@@ -15,6 +15,7 @@ Android Lollipop 新特性 - Palette
 > Palette 可以从一张图片中提取颜色，我们可以把提取的颜色融入到App UI中，可以使UI风格更加美观融洽。比如，我们可以从图片中提取颜色设置给ActionBar做背景颜色，这样ActionBar的颜色就会随着显示图片的变化而变化。  
 
 Palette可以提取的颜色如下
+
 * Vibrant  （有活力的）
 * Vibrant dark（有活力的 暗色）
 * Vibrant light（有活力的 亮色）
@@ -41,6 +42,7 @@ Palette 提供了四个静态方法用来生成对象。
 > 不难看出，生成方法分为`generate`(同步)和`generateAsync`(异步)两种，如果图片过大使用`generate`方法，可能会阻塞主线程，我们更倾向于使用`generateAsync`的方法，其实内部就是创建了一个`AsyncTask`。`generateAsync`方法需要一个`PaletteAsyncListener`对象用于监听生成完毕的回调。除了必须的`Bitmap`参数外，还可以传入一个`numColors`参数指定颜色数，默认是 16。  
 
 第二步，得到Palette对象后，就可以拿到提取到的颜色值
+
 * `Palette.getVibrantSwatch()`
 * `Palette.getDarkVibrantSwatch()`
 * `Palette.getLightVibrantSwatch()`
@@ -49,6 +51,7 @@ Palette 提供了四个静态方法用来生成对象。
 * `Palette.getLightMutedSwatch()`
 
 第三步，使用颜色，上面get方法中返回的是一个 `Swatch` 样本对象，这个样本对象是Palette的一个内部类，它提供了一些获取最终颜色的方法。
+
 * `getPopulation()`: 样本中的像素数量
 * `getRgb()`: 颜色的RBG值
 * `getHsl()`: 颜色的HSL值
